@@ -105,30 +105,7 @@
 
         <!-- load header footer -->
         <script type="module">
-            import { Init as InitHeader } from './components/header/header.js';
-            import { Init as InitFooter } from './components/footer/footer.js';
-
-            function LoadHeader() {
-                fetch('./components/header')
-                    .then((res) => res.text())
-                    .then((data) => {
-                        document.querySelector('#header').innerHTML = data;
-                        InitHeader();
-                    })
-                    .catch((rej) => console.error('[HEADER]: ', rej));
-            }
-
-            function LoadFooter() {
-                fetch('./components/footer')
-                    .then((res) => res.text())
-                    .then((data) => {
-                        document.querySelector('#footer').innerHTML = data;
-                        InitFooter();
-                        const logo = document.querySelector('#logo');
-                        logo.src = './assets/logo/tgex.png';
-                    })
-                    .catch((rej) => console.log('[FOOTER]: ', rej));
-            }
+            
 
 
         </script>
